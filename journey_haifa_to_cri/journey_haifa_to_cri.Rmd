@@ -1,0 +1,113 @@
+---
+title: "Presentation Ninja"
+subtitle: "&#x2694;&#xFE0F; xaringan +<br/>&#x1F60E; xaringanthemer"  
+author: 
+  - "Yihui Xie"
+  - "Garrick Aden-Buie"
+date: '`r Sys.Date()`'
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      ratio: 16:9
+      countIncrementalSlides: true
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = TRUE,
+  message = FALSE, 
+  warning = FALSE,
+  hiline = TRUE
+)
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_duo_accent(
+  primary_color = "#1381B0",
+  secondary_color = "#FF961C",
+  inverse_header_color = "#FFFFFF"
+)
+```
+
+---
+class: middle, center
+
+# HELLO!
+  
+---
+
+# About Me
+
+--
+
+Hi! I'm **Uriah Finkel**
+
+--
+
+Bsc in Statistics and Economics
+MA in Statistics
+
+--
+
+I work in Clalit Innovation  a very proud Statistician 
+
+😎
+
+---
+
+# About Me
+
+Hi! I'm **Uriah Finkel**
+  
+  
+  Bsc in Statistics and Economics
+MA in Statistics
+
+I work in Clalit Innovation  a very proud ~~Statistician~~ Data Scientist
+
+😅
+
+---
+## What did I miss?
+  
+.left-column[
+### Causal Inference
+]
+
+.right-column[
+  - **Miguel Hernan:** [What if 📕 + 👨‍💻](https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/), [DAGs 🎥](https://www.edx.org/course/causal-diagrams-draw-your-assumptions-before-your)
+  
+- **Brady Neal:** [Introduction to Causal Inference 📕 + 🎥](https://www.bradyneal.com/causal-inference-course)
+  
+-  **Lucy D'Agostino McGowan and Ellie Murray:** [Casual Inference 📻](https://casualinfer.libsyn.com/)
+]
+
+---
+
+# What did I miss?
+
+.left-column[
+### Causal Inference
+
+### How to Code
+]
+
+.right-column[
+- **git** 
+
+- **Fast Typing**
+
+- **DataCamp**
+
+- **Ask on the Web**: R for the masses, datamethods.com, twitter, github.
+
+]
