@@ -60,7 +60,7 @@ MA in Statistics
 
 I work in Clalit Innovation  a very proud Statistician 
 
-😎
+![](pooh_statistics.PNG)
 
 ---
 
@@ -74,13 +74,55 @@ MA in Statistics
 
 I work in Clalit Innovation  a very proud ~~Statistician~~ Data Scientist
 
-😅
+![](pooh_ds.PNG)
 
 ---
-## What did I miss?
+# What did I get that helped me?
+
+.left-column[
+## Statistical Theory
+]
+
+.right-column[
+]
+
+---
+
+# What did I get that helped me?
+
+.left-column[
+
+## Statistical Theory
+
+## Hands-on Modelling
+
+]
+
+.right-column[
+]
+
+---
+
+# What did I get that helped me?
+
+.left-column[
+
+## Statistical Theory
+
+## Hands-on Modelling
+
+## How to Code
+
+]
+
+.right-column[
+]
+
+---
+# What did I miss?
   
 .left-column[
-### Causal Inference
+## Causal Inference
 ]
 
 .right-column[
@@ -96,9 +138,9 @@ I work in Clalit Innovation  a very proud ~~Statistician~~ Data Scientist
 # What did I miss?
 
 .left-column[
-### Causal Inference
+## Causal Inference
 
-### How to Code
+## How to Code
 ]
 
 .right-column[
