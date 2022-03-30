@@ -1,9 +1,8 @@
 ---
-title: "Presentation Ninja"
-subtitle: "&#x2694;&#xFE0F; xaringan +<br/>&#x1F60E; xaringanthemer"  
+title: "From Haifa University to Clalit Innovation"
+subtitle: "🚡"  
 author: 
-  - "Yihui Xie"
-  - "Garrick Aden-Buie"
+  - "Uriah Finkel"
 date: '`r Sys.Date()`'
 output:
   xaringan::moon_reader:
@@ -15,6 +14,7 @@ output:
       ratio: 16:9
       countIncrementalSlides: true
 ---
+
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
@@ -32,17 +32,45 @@ knitr::opts_chunk$set(
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
 library(xaringanthemer)
 style_duo_accent(
-  primary_color = "#1381B0",
-  secondary_color = "#FF961C",
-  inverse_header_color = "#FFFFFF"
+  primary_color = "#267D91",
+  secondary_color = "#96d701",
+  # --inverse_header_color = "#DAB6C4", 
+  #background_color = "#DAB6C4"
 )
 ```
 
----
-class: middle, center
 
-# HELLO!
-  
+background-image: url("rachbalit.jpg")
+background-position: 50% 50%
+class: center, bottom, inverse
+
+---
+
+
+```{r xaringan-logo, echo=FALSE}
+xaringanExtra::use_logo(
+  image_url = "clalit_innovation_logo.jpg"
+)
+```
+
+# Agenda
+
+--
+
+### Tell you about my workplace - **Clalit Innovation** 💼
+
+--
+
+### How my experience changed my perspective 👴
+
+--
+
+### What did I get from the University that actually helped? 🤓
+
+--
+
+### What I had to learn by my own (& Some tips for you) 😵
+
 ---
 
 # About Me
@@ -58,7 +86,9 @@ MA in Statistics
 
 --
 
-I work in Clalit Innovation  a very proud Statistician 
+I work in Clalit Innovation as a very proud **Statistician**
+
+--
 
 ![](pooh_statistics.PNG)
 
@@ -69,12 +99,39 @@ I work in Clalit Innovation  a very proud Statistician
 Hi! I'm **Uriah Finkel**
   
   
-  Bsc in Statistics and Economics
+Bsc in Statistics and Economics
 MA in Statistics
 
-I work in Clalit Innovation  a very proud ~~Statistician~~ Data Scientist
+I work in Clalit Innovation as a very proud ~~Statistician~~ **Data Scientist**
 
 ![](pooh_ds.PNG)
+
+---
+class: inverse center middle
+
+# Clalit Innovation
+### My workplace 💼
+
+---
+
+# My team
+
+---
+class: inverse center middle
+
+# Than 🎓 & Now 👴
+### How my experience changed my perspective
+
+---
+
+
+
+---
+class: inverse center middle
+
+# Some Practical Tips about Coding
+
+💻
 
 ---
 # What did I get that helped me?
