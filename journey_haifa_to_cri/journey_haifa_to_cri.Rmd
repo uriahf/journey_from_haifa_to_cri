@@ -15,6 +15,9 @@ output:
       countIncrementalSlides: true
 ---
 
+```{r broadcast, echo=FALSE}
+xaringanExtra::use_broadcast()
+```
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
