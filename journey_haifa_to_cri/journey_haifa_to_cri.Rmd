@@ -22,11 +22,12 @@ knitr::opts_chunk$set(
   fig.width=9, fig.height=3.5, fig.retina=3,
   out.width = "100%",
   cache = FALSE,
-  echo = TRUE,
+  echo = FALSE,
   message = FALSE, 
   warning = FALSE,
   hiline = TRUE
 )
+library(rtichoke)
 ```
 
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
@@ -39,7 +40,6 @@ style_duo_accent(
 )
 ```
 
-
 background-image: url("rachbalit.jpg")
 background-position: 50% 50%
 class: center, bottom, inverse
@@ -51,6 +51,10 @@ class: center, bottom, inverse
 xaringanExtra::use_logo(
   image_url = "clalit_innovation_logo.jpg"
 )
+```
+
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
 ```
 
 # Agenda
@@ -114,19 +118,33 @@ class: inverse center middle
 
 ---
 
-# Clalit Innovation
+## Clalit Innovation
 
----
+#### Striving for excellent healthcare by promoting innovation within Clalit and beyond 
 
-# Our Data
+???
 
----
+- Clalit Innovation implements innovation in Clalit.
 
-# Data Science Team
+--
 
----
+## Our Data
 
-# What do we do
+#### Clalit’s database encompasses 20 years of medical history on all ensured patients
+
+???
+
+- Half of the country
+
+--
+
+## Data Science Team
+
+#### We are using the huge database for innovative research, predictive and preventative medicine through data and helping with internal challenges.
+
+???
+
+- research - articles; predictive - c-pi; internal challenges - covid19 lists.
 
 ---
 class: inverse center middle
@@ -197,7 +215,7 @@ xaringanExtra::use_panelset()
 .panel[.panel-name[Than 🎓]
 ###  Who needs Statistics?
 
-- We've got Machine Learning, statistics is old. 
+- We've got Machine Learning, Statistics is old. 
 
 - Students from the Computer Science department make a lot more money.
 
@@ -226,7 +244,7 @@ xaringanExtra::use_panelset()
 ]
 
 .panel[.panel-name[Now 👴]
-### A-parametrics Statistics might be extremly useful
+### Statistics might be extremly useful
 
 - Statistics develops all the time, and it doesn't go anywhere. 
 
@@ -244,46 +262,84 @@ xaringanExtra::use_panelset()
 
 .panelset.sideways[
 .panel[.panel-name[Than 🎓]
-###  Who needs Statistics?
+### I don't see how ROC is usefull
 
-- We've got Machine Learning, statistics is old. 
+```{r fig.align = 'left'}
+create_roc_curve(
+  probs = example_dat$estimated_probabilities,
+  real = example_dat$outcome, 
+  interactive = FALSE
+) + 
+  ggplot2::coord_fixed()
+```
 
-- Students from the Computer Science department make a lot more money.
 
 ]
 
 .panel[.panel-name[Problem 🤔]
-###  Can we help clinicians by making predictions?
+###  I need to compare different models
 
-- We can predict well future illness.
-
-- Our purpose is to prevent it by making intervention list for patients at risk.
-
-- Clinicians want to know what stands behind these predictions.
+```{r fig.align = 'left'}
+create_roc_curve(
+  probs = list(
+    "First Model" = example_dat$estimated_probabilities,
+    "Second Model" = example_dat$bad_model
+  ),
+  real = example_dat$outcome,
+  interactive = FALSE
+) + 
+  ggplot2::coord_fixed()
+```
 
 ]
 
 .panel[.panel-name[Solution and Result 💡]
-###  Interpretable models
+###  [rtichoke](https://uriahf.github.io/rtichoke/) interactive roc curve
 
-- Regressions with coefficients that are in concordance with the clinic intuition.
+```{r }
 
-- Comparing performance and results to well-known baseline models.
 
-- Clinical Sanity Checks (Do we have young patient with high predictions?)
+create_roc_curve(
+  probs = list(
+    "First Model" = example_dat$estimated_probabilities,
+    "Second Model" = example_dat$bad_model
+  ),
+  real = example_dat$outcome,
+  interactive = TRUE
+) %>% 
+plotly::layout(width=350, 
+               height=400)  %>% 
+  plotly::animation_slider(
+    currentvalue = list(prefix = "Probability Threshold: ", 
+                        # font = list(color="black"),
+                        xanchor = "left"),
+    pad = list(t = 50)
+  )
+```
 
 ]
 
 .panel[.panel-name[Now 👴]
-### A-parametrics Statistics might be extremly useful
+### I still don't see how ROC curve is usefull
 
-- Statistics develops all the time, and it doesn't go anywhere. 
-
-- Students from the Computer Science department make a lot more money because they know *how to code*. 
-
-- It's relatively easy for a statistician to learn how to code.
-
-- It's extremely difficult for a computer scientist to learn how to be a statistician.
+```{r}
+create_decision_curve(
+  probs = list(
+    "First Model" = example_dat$estimated_probabilities,
+    "Second Model" = example_dat$bad_model
+  ),
+  real = example_dat$outcome,
+  interactive = TRUE
+) %>% 
+plotly::layout(width=350, 
+               height=400)  %>% 
+  plotly::animation_slider(
+    currentvalue = list(prefix = "Probability Threshold: ", 
+                        # font = list(color="black"),
+                        xanchor = "left"),
+    pad = list(t = 50)
+  )
+```
 
 ]
 ]
@@ -291,60 +347,46 @@ xaringanExtra::use_panelset()
 ---
 class: inverse center middle
 
-# Some Practical Tips about Coding
-
-💻
-
----
-# What did I get that helped me?
-
-.left-column[
-## Statistical Theory
-]
-
-.right-column[
-]
+# What did I get from the University that actually helped? 🤓
 
 ---
 
-# What did I get that helped me?
+# What did I get from the University that actually helped? 🤓
 
-.left-column[
+--
 
-## Statistical Theory
+### - Statistical Theory 🧠
 
-## Hands-on Modelling
+--
 
-]
+### - Hands-on Modelling 🙌
 
-.right-column[
-]
+--
 
----
-
-# What did I get that helped me?
-
-.left-column[
-
-## Statistical Theory
-
-## Hands-on Modelling
-
-## How to Code
-
-]
-
-.right-column[
-]
+### - How to Code 👨‍💻
 
 ---
-# What did I miss?
-  
+class: inverse center middle
+
+# What I had to learn by my own 😵 
+
+--
+
+###(& some stuff that might help you do the same)
+
+---
+# What I had to learn by my own 😵
+
 .left-column[
 ## Causal Inference
 ]
 
+--
+
 .right-column[
+
+### Some useful resources
+
   - **Miguel Hernan:** [What if 📕 + 👨‍💻](https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/), [DAGs 🎥](https://www.edx.org/course/causal-diagrams-draw-your-assumptions-before-your)
   
 - **Brady Neal:** [Introduction to Causal Inference 📕 + 🎥](https://www.bradyneal.com/causal-inference-course)
@@ -354,7 +396,7 @@ class: inverse center middle
 
 ---
 
-# What did I miss?
+# What I had to learn by my own 😵
 
 .left-column[
 ## Causal Inference
@@ -362,13 +404,23 @@ class: inverse center middle
 ## How to Code
 ]
 
+--
+
 .right-column[
-- **git** 
 
-- **Fast Typing**
+### Some practical tips
 
-- **DataCamp**
+- **git 🐙😺 ** [Happy git with r](https://happygitwithr.com/)
 
-- **Ask on the Web**: R for the masses, datamethods.com, twitter, github.
+- **Fast Typing ⌨️ ** [10 Fast Fingers](https://10fastfingers.com/)
+
+- **Hands-On online course 🙌 ** [Data Camp](https://www.datacamp.com/) 
+
+- **Ask on the Web 👀 **: [R for the masses](https://www.facebook.com/groups/1655238354489398/)
 
 ]
+
+---
+class: inverse center middle
+
+# Thank You!
