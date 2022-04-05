@@ -152,7 +152,7 @@ class: inverse center middle
 ---
 class: inverse center middle
 
-# Than 🎓 & Now 👴
+# Then 🎓 & Now 👴
 ### How my experience changed my perspective
 
 ---
@@ -162,18 +162,18 @@ xaringanExtra::use_panelset()
 ```
 
 
-# Than & Now: Covid-19 Research 😷
+# Then & Now: Covid-19 Research 😷
 
 .panelset.sideways[
-.panel[.panel-name[Than 🎓]
-###  Who needs A-parametrics Statistics?
+.panel[.panel-name[Then 🎓]
+###  Who needs Nonparametric Statistics?
 
 - You can't rely on small sample size for real life decisions. 
 
 
 - It's seems anachronistic.
 
-- Reading Material: [A-parametric Statistics by Alona Raviv]("http://www.math.tau.ac.il/~alona/nonparametric__Alona_Raviv.pdf")
+- Reading Material: [Nonparametric Statistics by Alona Raviv]("http://www.math.tau.ac.il/~alona/nonparametric__Alona_Raviv.pdf")
 
 ]
 
@@ -200,7 +200,7 @@ xaringanExtra::use_panelset()
 ]
 
 .panel[.panel-name[Now 👴]
-### A-parametrics Statistics might be extremly useful
+### Nonparametric Statistics might be extremly useful
 
 - Sometimes small-sample size is all you've got, so you better use it.
 
@@ -212,10 +212,10 @@ xaringanExtra::use_panelset()
 ---
 
 
-# Than & Now: Predictive Models 🔮
+# Then & Now: Predictive Models 🔮
 
 .panelset.sideways[
-.panel[.panel-name[Than 🎓]
+.panel[.panel-name[Then 🎓]
 ###  Who needs Statistics?
 
 - We've got Machine Learning, Statistics is old. 
@@ -261,10 +261,10 @@ xaringanExtra::use_panelset()
 ]
 ---
 
-# Than & Now: Performance Metrics ✔️❌
+# Then & Now: Performance Metrics ✔️❌
 
 .panelset.sideways[
-.panel[.panel-name[Than 🎓]
+.panel[.panel-name[Then 🎓]
 ### I don't see how ROC is usefull
 
 ```{r fig.align = 'left'}
@@ -424,6 +424,8 @@ class: inverse center middle
 ]
 
 ---
-class: inverse center middle
+class: inverse center 
+background-image: url("thank_you.jpg")
+background-size: contain
 
 # Thank You!
