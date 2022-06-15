@@ -60,6 +60,31 @@ xaringanExtra::use_logo(
 xaringanExtra::use_tile_view()
 ```
 
+```{r metathis, echo=FALSE}
+library(metathis)
+meta() %>%
+  meta_name("github-repo" = "uriahf/journey_from_haifa_to_cri") %>%
+  meta_social(
+    title = "From Haifa University to Clalit Innovation",
+    description = "My Journey from Haifa University to Clalit Innovation: about Clalit Innovation, my experience and how it changed my perspective, what did I get from University that actually helped and what I had to learn by my own",
+    url = "https://haifa-to-clalit-innovation.netlify.app/journey_haifa_to_cri/journey_haifa_to_cri.html",
+    # image = "https://build-your-own-universe.netlify.app/social-card.png",
+    # image_alt = paste(
+    #   "Title slide of Build your own universe:",
+    #   "Scale high-quality research data provisioning with R packages,",
+    #   "presented at R/Medicine 2020 by Travis Gerke and Garrick Aden-Buie"
+    # ),
+    # og_type = "website",
+    # og_author = "Travis Gerke",
+    # twitter_card_type = "summary_large_image",
+    # twitter_creator = "@grrrck",
+    # twitter_site = "@travisgerke"
+  )
+```
+```{r xaringanExtra-share-again, echo=FALSE}
+xaringanExtra::use_share_again()
+```
+
 # Agenda
 
 --
@@ -267,10 +292,10 @@ xaringanExtra::use_panelset()
 .panel[.panel-name[Then 🎓]
 ### I don't see how ROC is usefull
 
-```{r fig.align = 'left'}
+```{r fig.align='left', message=FALSE, warning=FALSE, results='hide'}
 create_roc_curve(
-  probs = example_dat$estimated_probabilities,
-  real = example_dat$outcome, 
+  probs = list(example_dat$estimated_probabilities),
+  real = list(example_dat$outcome), 
   interactive = FALSE
 ) + 
   ggplot2::coord_fixed()
@@ -288,7 +313,7 @@ create_roc_curve(
     "First Model" = example_dat$estimated_probabilities,
     "Second Model" = example_dat$bad_model
   ),
-  real = example_dat$outcome,
+  reals = list(example_dat$outcome),
   interactive = FALSE
 ) + 
   ggplot2::coord_fixed()
@@ -307,7 +332,7 @@ create_roc_curve(
     "First Model" = example_dat$estimated_probabilities,
     "Second Model" = example_dat$bad_model
   ),
-  real = example_dat$outcome,
+  reals = list(example_dat$outcome),
   interactive = TRUE
 ) %>% 
 plotly::layout(width=350, 
@@ -331,7 +356,7 @@ create_decision_curve(
     "First Model" = example_dat$estimated_probabilities,
     "Second Model" = example_dat$bad_model
   ),
-  real = example_dat$outcome,
+  real = list(example_dat$outcome),
   interactive = TRUE
 ) %>% 
 plotly::layout(width=350, 
