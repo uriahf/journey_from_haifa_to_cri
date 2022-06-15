@@ -68,17 +68,17 @@ meta() %>%
     title = "From Haifa University to Clalit Innovation",
     description = "My Journey from Haifa University to Clalit Innovation: about Clalit Innovation, my experience and how it changed my perspective, what did I get from University that actually helped and what I had to learn by my own",
     url = "https://haifa-to-clalit-innovation.netlify.app/journey_haifa_to_cri/journey_haifa_to_cri.html",
-    # image = "https://build-your-own-universe.netlify.app/social-card.png",
+    image = "https://haifa-to-clalit-innovation.netlify.app/share-card.png",
     # image_alt = paste(
     #   "Title slide of Build your own universe:",
     #   "Scale high-quality research data provisioning with R packages,",
     #   "presented at R/Medicine 2020 by Travis Gerke and Garrick Aden-Buie"
     # ),
-    # og_type = "website",
-    # og_author = "Travis Gerke",
-    # twitter_card_type = "summary_large_image",
-    # twitter_creator = "@grrrck",
-    # twitter_site = "@travisgerke"
+    og_type = "website",
+    og_author = "Uriah Finkel",
+    twitter_card_type = "summary_large_image",
+    twitter_creator = "@FinkelUriah",
+    twitter_site = "@FinkelUriah"
   )
 ```
 ```{r xaringanExtra-share-again, echo=FALSE}
