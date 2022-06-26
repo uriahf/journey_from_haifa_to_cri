@@ -38,8 +38,14 @@ library(xaringanthemer)
 style_duo_accent(
   primary_color = "#267D91",
   secondary_color = "#96d701",
-  # --inverse_header_color = "#DAB6C4", 
-  #background_color = "#DAB6C4"
+  link_color = "#96d701",
+  extra_fonts = list(
+    google_font("Commissioner")),
+  extra_css = list(
+    ".rtichoke_blog" = list(
+      "font-weight" = "700",
+      "font-family" = "Commissioner")
+  )
 )
 ```
 
@@ -47,7 +53,6 @@ background-image: url("rachbalit.jpg")
 background-position: 50% 50%
 class: center, bottom, inverse
 
----
 
 
 ```{r xaringan-logo, echo=FALSE}
@@ -79,6 +84,16 @@ meta() %>%
 ```{r xaringanExtra-share-again, echo=FALSE}
 xaringanExtra::use_share_again()
 ```
+
+---
+
+class: center, middle
+
+# Visit .rtichoke_blog[[rtichoke blog](https://rtichoke-blog.netlify.app/)]
+
+(For Interactive Performance Metrics and Curves)
+
+---
 
 # Agenda
 
