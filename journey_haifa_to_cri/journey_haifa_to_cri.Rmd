@@ -91,7 +91,7 @@ class: center, middle
 
 # Visit .rtichoke_blog[[rtichoke blog](https://rtichoke-blog.netlify.app/)]
 
-(For Interactive Performance Metrics and Curves)
+For Interactive Performance Metrics and Curves
 
 ---
 
